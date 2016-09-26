@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('user', 'UserController@index')->name('get_user');
+
+Route::get('user/abc/{slug}', 'UserController@detail')->name('get_abc_detail');
+Route::post('user/edit', 'UserController@save')->name('get_abc_edit');
